@@ -1,5 +1,5 @@
 ---
-title: Writing Good Software
+title: Writing Good Code
 teaching: 15
 exercises: 0
 questions:
@@ -81,6 +81,8 @@ reach a point where you can code a solution, and build back up from there.
 ## Know that your code is doing the right thing
 
 Make sure to test your functions!
+ - with your own test code
+ - or use the package 'testthat'
 
 ## Don't repeat yourself
 
@@ -95,4 +97,10 @@ for which a particular input always gives a particular output.
 ## Remember to be stylish
 
 Apply consistent style to your code.
+
+```{r eval=FALSE, include=FALSE}
+# julia: what does this mean??
+```
+
+
 

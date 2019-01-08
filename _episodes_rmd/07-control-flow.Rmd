@@ -456,3 +456,37 @@ output_vector2
 > >  ```
 > {: .solution}
 {: .challenge}
+
+> ## Challenge 6 - by Julia, should be moved up
+>
+> Determine for each country/year combination in Asia the change in life expectancy 
+> for the continent of Asia when that country/year combination is omitted.
+>
+> > ## Solution for Challenge 6
+> >
+> > First, filter the data for Asia, then loop through each row in the filtered data, 
+> > compute the mean with the function `mean()` and save the results in a list object. 
+> > ```{r 07-chall-06-sol-a, eval=FALSE}
+> > Asia <- gapminder[gapminder$continent == "Asia",]
+> > mean_lifeExp <- list[[]]
+> > for(i in 1:nrow(Asia) {
+> > mean_lifeExp[[i]] <- mean(Asia[-i, "lifeExp"], na.rm = T)
+> > ```
+> >
+> > It will be computationally more efficiently to pre-allocate the list to its  
+> > expected length. 
+> > ```{r 07-chall-06-sol-b, eval=FALSE}
+> > Asia <- gapminder[gapminder$continent == "Asia",]
+> > mean_lifeExp <- vector("list", nrow(Asia))
+> > for(i in 1:nrow(Asia) {
+> > mean_lifeExp[[i]] <- mean(Asia[-i, "lifeExp"], na.rm = T)
+> > ```
+> >
+> > Plotting the results are a nice way to quickly view what happened 
+> > expected length. 
+> > ```{r 07-chall-06-sol-c, eval=FALSE}
+> > plot(1:nrow(Asia),  mean_lifeExp)
+> > ```
+> {: .solution}
+{: .challenge}
+
