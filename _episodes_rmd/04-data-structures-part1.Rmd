@@ -112,7 +112,7 @@ There are 5 main types: `double`, `integer`, `complex`, `logical` and `character
 
 ```{r}
 typeof(3.14)
-typeof(1L) # The L suffix forces the number to be an integer, since by default R uses float numbers
+typeof(1L) # The L suffix forces the number to be an integer, since by default R uses floating point numbers
 typeof(1+1i)
 typeof(TRUE)
 typeof('banana')
@@ -315,7 +315,7 @@ combine_example <- c(ab_vector, 'SWC')
 combine_example
 ```
 
-You can also make series of numbers:
+You can also make sequence of numbers using the `:` operator: 
 
 ```{r}
 mySeries <- 1:10
